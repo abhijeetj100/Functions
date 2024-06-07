@@ -23,5 +23,17 @@ public class Main {
         System.out.println("Perfect square root of 48: " + GetPerfectSquareRoot(48));
         System.out.println("Is 48 a perfect square?: " + IsPerfectSquare(48));
 
+        int[] nums1 = new int[]{1, 2, 3, 0, 0, 0};
+        int[] nums2 = new int[]{4, 5, 6};
+        MergeTwoSortedArrays(nums1, 3, nums2, 3);
+        System.out.println();
+
+        int[] nums3 = new int[]{1, 1, 2};
+        System.out.println(RemoveDuplicatesFromSortedArray(nums3));
+        System.out.println();
+
+        int[] nums4 = new int[]{1, 1, 1, 2, 2, 3};
+        System.out.println(RemoveDuplicatesFromSortedArray_Two(nums4));
+        System.out.println();
     }
 }
