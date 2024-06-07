@@ -29,4 +29,17 @@ public class Functions {
         int countOfFactors = CountFactors(N);
         return countOfFactors == 2;
     }
+
+    public static int GetPerfectSquareRoot(int N){
+        int ans = 0;
+        for(int i = 1; i*i <= N; i++){
+            ans = i;
+        }
+        return ans;
+    }
+
+    public static boolean IsPerfectSquare(int N){
+        int squareRoot = GetPerfectSquareRoot(N);
+        return squareRoot*squareRoot == N;
+    }
 }

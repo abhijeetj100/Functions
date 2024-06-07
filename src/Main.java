@@ -17,5 +17,11 @@ public class Main {
 
         System.out.println("Number 5 is Prime?: " + CheckPrime(5));
         System.out.println("Number 8 is Prime?: " + CheckPrime(8));
+
+        System.out.println("Perfect square root of 25: " + GetPerfectSquareRoot(25));
+        System.out.println("Is 25 a perfect square?: " + IsPerfectSquare(25));
+        System.out.println("Perfect square root of 48: " + GetPerfectSquareRoot(48));
+        System.out.println("Is 48 a perfect square?: " + IsPerfectSquare(48));
+
     }
 }
