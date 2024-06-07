@@ -14,10 +14,8 @@ public class Main {
 
         System.out.println("Number of factors for 10 is: " + CountFactors(10));
         System.out.println("Number of factors for 50 is: " + CountFactors(50));
-        System.out.println("Number of factors for 200 is: " + CountFactors(200));
 
         System.out.println("Number 5 is Prime?: " + CheckPrime(5));
         System.out.println("Number 8 is Prime?: " + CheckPrime(8));
-        System.out.println("Number 16 is Prime?: " + CheckPrime(16));
     }
 }
