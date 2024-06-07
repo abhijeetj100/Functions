@@ -17,6 +17,5 @@ public class Main {
         System.out.println("Number 5 is Prime?: " + CheckPrime(5));
         System.out.println("Number 8 is Prime?: " + CheckPrime(8));
         System.out.println("Number 99 is Prime?: " + CheckPrime(99));
-        System.out.println("Number 99 is Prime?: " + CheckPrime(99));
     }
 }
