@@ -24,4 +24,9 @@ public class Functions {
         }
         return count;
     }
+
+    public static boolean CheckPrime(int N){
+        int countOfFactors = CountFactors(N);
+        return countOfFactors == 2;
+    }
 }
