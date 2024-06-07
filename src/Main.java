@@ -13,6 +13,6 @@ public class Main {
         System.out.println("Number a2 exists in arr?  " + NumberExistsIn1DArray(array, a2));
 
         System.out.println("Number of factors for 10 is: " + CountFactors(10));
-        // Checking if branch protection is working
+        // Checking if branch protection is working..
     }
 }
