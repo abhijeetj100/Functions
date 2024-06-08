@@ -35,5 +35,9 @@ public class Main {
         int[] nums4 = new int[]{1, 1, 1, 2, 2, 3};
         System.out.println(RemoveDuplicatesFromSortedArray_Two(nums4));
         System.out.println();
+
+        int[] nums5 = new int[]{1, 1, 1, 2, 2, 3};
+        System.out.println("Majority element in array nums5: " + MajorityElement(nums5));
+        System.out.println();
     }
 }

@@ -133,4 +133,23 @@ public class Functions {
 //        }
 //        return index_2+1;
     }
+
+    public static int MajorityElement(int[] nums){
+//      Moore Voting Algorithm
+        int count = 0;
+        int candidate = nums[0];
+        for(int currentElement : nums){
+            if(count == 0){
+                candidate = currentElement;
+                count++;
+            }
+            else if(candidate == currentElement){
+                count++;
+            }
+            else{
+                count--;
+            }
+        }
+        return candidate;
+    }
 }
