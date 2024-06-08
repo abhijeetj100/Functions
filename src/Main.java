@@ -1,6 +1,6 @@
 import java.util.*;
 
-import static Functions.Functions.*;
+import static Functions.Arrays.*;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
@@ -38,6 +38,12 @@ public class Main {
 
         int[] nums5 = new int[]{1, 1, 1, 2, 2, 3};
         System.out.println("Majority element in array nums5: " + MajorityElement(nums5));
+        System.out.println();
+
+        int[] nums6 = new int[]{1, 2, 3, 4, 5, 6, 7};
+        int k = 5;
+        System.out.println("Rotated array by k=5: ");
+        Rotate(nums6, k);
         System.out.println();
     }
 }
