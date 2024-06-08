@@ -2,8 +2,8 @@ package Functions;
 
 import java.util.ArrayList;
 
-public class Functions {
-    public static boolean NumberExistsIn1DArray(ArrayList<Integer> arr, int a){
+public class Arrays {
+    public static boolean NumberExistsIn1DArray(ArrayList<Integer> arr, int a) {
         for (int j : arr) {
             if (j == a) {
                 return true;
@@ -12,49 +12,48 @@ public class Functions {
         return false;
     }
 
-    public static int CountFactors(int N){
+    public static int CountFactors(int N) {
         int count = 0;
-        for(int i = 1; i*i<=N; i++){
-            if(i*i == N){
+        for (int i = 1; i * i <= N; i++) {
+            if (i * i == N) {
                 count++;
             }
-            if(N%i == 0){
-                count+=2;
+            if (N % i == 0) {
+                count += 2;
             }
         }
         return count;
     }
 
-    public static boolean CheckPrime(int N){
+    public static boolean CheckPrime(int N) {
         int countOfFactors = CountFactors(N);
         return countOfFactors == 2;
     }
 
-    public static int GetPerfectSquareRoot(int N){
+    public static int GetPerfectSquareRoot(int N) {
         int ans = 0;
-        for(int i = 1; i*i <= N; i++){
+        for (int i = 1; i * i <= N; i++) {
             ans = i;
         }
         return ans;
     }
 
-    public static boolean IsPerfectSquare(int N){
+    public static boolean IsPerfectSquare(int N) {
         int squareRoot = GetPerfectSquareRoot(N);
-        return squareRoot*squareRoot == N;
+        return squareRoot * squareRoot == N;
     }
 
     public static void MergeTwoSortedArrays(int[] nums1, int m, int[] nums2, int n) {
 //      OPTIMIZED SOLUTION
 
-        int i = m-1;
-        int j = n-1;
-        int k = m+n-1;
+        int i = m - 1;
+        int j = n - 1;
+        int k = m + n - 1;
 
-        while(j>=0){
-            if(i>=0 && nums1[i] > nums2[j]){
+        while (j >= 0) {
+            if (i >= 0 && nums1[i] > nums2[j]) {
                 nums1[k--] = nums1[i--];
-            }
-            else{
+            } else {
                 nums1[k--] = nums2[j--];
             }
         }
@@ -86,25 +85,25 @@ public class Functions {
 //        }
     }
 
-    public static int RemoveDuplicatesFromSortedArray(int[] nums){
+    public static int RemoveDuplicatesFromSortedArray(int[] nums) {
         int i = 0;
         int index = 1;
         int length = nums.length;
-        while(i<length-1){
-            if(nums[i] != nums[i+1]){
-                nums[index++] = nums[i+1];
+        while (i < length - 1) {
+            if (nums[i] != nums[i + 1]) {
+                nums[index++] = nums[i + 1];
             }
             i++;
         }
         return index;
     }
 
-    public static int RemoveDuplicatesFromSortedArray_Two(int[] nums){
+    public static int RemoveDuplicatesFromSortedArray_Two(int[] nums) {
 //        OPTIMIZED SOLUTION
         int j = 1;
         int length = nums.length;
-        for(int i = 1; i<length; i++){
-            if(j == 1 || nums[i] != nums[j-2]){
+        for (int i = 1; i < length; i++) {
+            if (j == 1 || nums[i] != nums[j - 2]) {
                 nums[j] = nums[i];
                 j++;
             }
@@ -132,5 +131,42 @@ public class Functions {
 //            i++;
 //        }
 //        return index_2+1;
+    }
+
+    public static int MajorityElement(int[] nums) {
+//      Moore Voting Algorithm: O(N)
+        int count = 0;
+        int candidate = nums[0];
+        for (int currentElement : nums) {
+            if (count == 0) {
+                candidate = currentElement;
+                count++;
+            } else if (candidate == currentElement) {
+                count++;
+            } else {
+                count--;
+            }
+        }
+        return candidate;
+    }
+
+    public static void Reverse(int[] nums, int start, int end) {
+        int length = (end - start + 1);
+        for (int i = 0; i < length / 2; i++) {
+            int start_index = i + start;
+            int j = length - 1 - i + start;
+
+            nums[start_index] += nums[j];
+            nums[j] = nums[start_index] - nums[j];
+            nums[start_index] -= nums[j];
+        }
+    }
+
+    public static void Rotate(int[] nums, int k) {
+        int length = nums.length;
+        k = k % length;
+        Reverse(nums, 0, nums.length - 1);
+        Reverse(nums, 0, k - 1);
+        Reverse(nums, k, nums.length - 1);
     }
 }
