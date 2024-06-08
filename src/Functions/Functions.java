@@ -135,7 +135,7 @@ public class Functions {
     }
 
     public static int MajorityElement(int[] nums){
-//      Moore Voting Algorithm
+//      Moore Voting Algorithm: O(N)
         int count = 0;
         int candidate = nums[0];
         for(int currentElement : nums){
